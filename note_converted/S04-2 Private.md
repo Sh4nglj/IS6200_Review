@@ -1,7 +1,5 @@
 # Hyperledger Fabric 总结
 
-以下是对《IS6200 - Topic 4 - Private Blockchain.pdf》课件第28页之后“From Public to Private: Blockchains: Hyperledger Fabric”部分的详细总结，涵盖所有概念、补充未解释内容、分类解释、示例和关键词中英对照。
-
 ## 1. 背景：从公共区块链到私有区块链
 
 ### 1.1 公共区块链与私有区块链的区别
