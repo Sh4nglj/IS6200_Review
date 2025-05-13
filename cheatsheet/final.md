@@ -1,3 +1,360 @@
+## 1. 货币相关问题
+
+### 问题 1: What is money?  
+
+Money is a **medium of exchange**, **unit of account**, and store of value used to facilitate transactions and economic activities.  
+
+### 问题 2: What are the three important functions of money?  
+
+The three important functions of money are:  
+
+1. Medium of Exchange: Used to buy goods and services.  
+2. Unit of Account: Provides a standard measure of value.  
+3. Store of Value: Retains value over time for future use.  
+
+### 问题 3: Do you think cryptocurrencies are good money?  
+
+Cryptocurrencies like Bitcoin are partially good money, serving as a medium of exchange and store of value, but their volatility and limited acceptance hinder their role as a stable unit of account. Stablecoins like USDT better fulfill money’s functions due to price stability.  
+
+## 2. 比特币相关问题
+
+### 问题 4: How do we secure our own accounts?  
+
+Bitcoin accounts are secured using **public-private key** cryptography, where the private key, kept secret, signs transactions to prove ownership, and losing it results in loss of funds.  
+
+### 问题 5: Who should keep the ledger?  
+
+In Bitcoin, the ledger is maintained by a **decentralized network** of nodes, primarily miners, who validate and record transactions in the blockchain without a single controlling entity.  
+
+### 问题 6: How should we trust the ledger maintainer?  
+
+Trust in Bitcoin’s ledger is achieved through Proof of Work (**PoW**) consensus, where miners compete to solve costly computational puzzles, making manipulation economically impractical.  
+
+### 问题 7: How do we protect ourselves from attacks?  
+
+Bitcoin protects against attacks via Proof of Work, requiring attackers to control over 50% of mining power (51% attack), which is costly and impractical due to high energy demands.  
+
+### 问题 8: How does this help privacy?  
+
+Bitcoin’s public-private key system provides pseudonymity(伪匿名性), linking transactions to addresses rather than real identities, offering some privacy unless linked to personal information.  
+
+### 问题 9: Does this conflict with transparency?  
+
+Bitcoin’s pseudonymity does not conflict with transparency, as the blockchain is fully public, allowing anyone to verify transactions while protecting user identities.  
+
+### 问题 10: Why or why not?  
+
+Bitcoin balances privacy and transparency: pseudonymous addresses protect user identities (privacy), while the public blockchain ensures verifiable transactions (transparency).  
+
+### 问题 11: How does Zcash change this landscape?  
+
+Zcash enhances privacy over Bitcoin by using zero-knowledge proofs (zk-SNARKs) to hide transaction details (sender, receiver, amount) while allowing public verification of validity.  
+
+### 问题 12: What is the main difference between Zcash and Bitcoin?  
+
+The main difference is privacy: Bitcoin offers pseudonymity with transparent transactions, while Zcash uses zk-SNARKs for optional shielded transactions, hiding details.  
+
+### 问题 13: Proof of Work? How do you describe this in your own words?  
+
+Proof of Work (PoW) is a consensus mechanism where miners solve complex mathematical puzzles to validate transactions and secure the blockchain through computational effort.  
+
+### 问题 14: Why are miners willing to spend so much electricity in doing that?  
+
+Miners spend electricity on Proof of Work to earn block rewards (newly minted Bitcoins) and transaction fees, which incentivize their costly computational efforts.  
+
+### 问题 15: What is the difficulty of the genesis block?  
+
+The difficulty of Bitcoin’s genesis block, created on January 3, 2009, was set to the minimum value of 1, as it was the first block.  
+
+### 问题 16: Can you recall two types of scaling solutions?  
+
+Two types of scaling solutions for Bitcoin are:  
+
+1. Layer 1 (On-Chain): Modifying the protocol, e.g., SegWit to increase block capacity.  
+2. Layer 2 (Off-Chain): Processing transactions off-chain, e.g., Lightning Network.  
+
+### 问题 17: What’s SegWit? What’s the original problem that it tried to solve?  
+
+SegWit (Segregated Witness) is a Bitcoin upgrade that separates signature data from transaction data, increasing block capacity and fixing transaction malleability to enable Layer 2 solutions like the Lightning Network.  
+
+### 问题 18: What’s Lightning Network?  
+
+The Lightning Network is a Layer 2 scaling solution for Bitcoin, enabling fast, low-cost off-chain transactions via payment channels, settling final balances on-chain.  
+
+### 问题 19: What’s Taproot?  
+
+Taproot is a 2021 Bitcoin soft fork introducing Schnorr signatures and MAST to enhance privacy and efficiency, making complex transactions appear like regular ones.  
+
+### 问题 20: What is "ordinals"? How does it change the Bitcoin ecosystem?  
+
+Ordinals inscribe data on individual satoshis, enabling NFTs and expanding Bitcoin’s use cases beyond payments to include digital collectibles and art.  
+
+## 3. 加密技术相关问题
+
+### 问题 21: What is encryption?  
+
+Encryption is the process of converting plaintext into ciphertext using a key to protect data confidentiality, accessible only to authorized parties.  
+
+### 问题 22: Symmetric vs. Asymmetric?  
+
+Symmetric encryption uses one key for encryption and decryption (e.g., AES), fast but requires secure key sharing. Asymmetric encryption uses a public-private key pair (e.g., RSA), slower but secure for key exchange.  
+
+### 问题 23: What is a hash function?  
+
+A hash function is a one-way function mapping data to a fixed-size output (hash) to ensure data integrity, being deterministic, collision-resistant, and irreversible.  
+
+### 问题 24: Know some basic properties of cryptographic hash functions  
+
+Basic properties of cryptographic hash functions include:  
+
+1. Deterministic: Same input produces the same hash.  
+2. Collision Resistance: Hard to find two inputs with the same hash.  
+3. Preimage Resistance: Hard to reverse the hash to the original input.  
+
+### 问题 25: What’s its difference from encryption?  
+
+Hash functions are one-way, producing a fixed-size output to verify integrity, and are irreversible, while encryption is reversible to protect confidentiality using keys.  
+
+### 问题 26: How about digital signature?  
+
+A digital signature uses asymmetric cryptography (private key to sign, public key to verify) to ensure authenticity, integrity, and non-repudiation of messages or transactions.  
+
+### 问题 27: How digital signature works?  
+
+A digital signature works by hashing a message, signing the digest with the sender’s private key, and verifying it with the public key to ensure the message is unchanged and authentic.  
+
+### 问题 28: Why we need it? (or how is it better than our traditional wet ink signature?)  
+
+Digital signatures provide cryptographic proof of authenticity, integrity, and non-repudiation, making them harder to forge and more secure than wet ink signatures for digital transactions.  
+
+## 4. 以太坊相关问题
+
+### 问题 29: What’s added in Ethereum such that it can achieve things that Bitcoin is incapable of?  
+
+Ethereum adds smart contracts, programmable code in a Turing-complete language, enabling complex applications like DeFi and DAOs beyond Bitcoin’s payment focus.  
+
+### 问题 30: What new feature we need to go beyond payment only?  
+
+Smart contracts are needed, allowing programmable, self-executing agreements for applications like lending, voting, and token creation.  
+
+### 问题 31: How do we safeguard the network while adding this new feature?  
+
+Ethereum safeguards smart contracts with the Gas mechanism, limiting computational resources, preventing infinite loops, and charging fees to deter malicious code.  
+
+### 问题 32: Can we predict whether a program will stop within a finite amount of time?  
+
+No, the halting problem proves it’s impossible to predict whether a program will stop in finite time for all cases, so Ethereum uses Gas limits.  
+
+### 问题 33: Can you program/code in Bitcoin?  
+
+Bitcoin supports limited programming via its scripting language (e.g., for multi-signature transactions), but it’s not Turing-complete, unlike Ethereum’s smart contracts.  
+
+### 问题 34: What’s not good?  
+
+Bitcoin’s scripting language is limited, not Turing-complete, and lacks flexibility for complex applications like DeFi or DAOs, restricting it to payments.  
+
+### 问题 35: What is the halting problem?  
+
+The halting problem proves no algorithm can determine whether any program will halt or run indefinitely for all inputs.  
+
+### 问题 36: And how does Ethereum deal with it?  
+
+Ethereum deals with the halting problem by enforcing Gas limits on smart contract execution, stopping programs that exceed allocated resources.  
+
+### 问题 37: What’s finality?  永久确认且不可逆的保证，通过共识机制实现。
+
+Finality is the assurance that a blockchain transaction is permanently confirmed and cannot be reversed, achieved through consensus mechanisms.  
+
+### 问题 38: How’s finality different between PoW and PoS?  
+
+In PoW (e.g., Bitcoin), finality is probabilistic, requiring multiple confirmations to reduce reversal risk. In PoS (e.g., Ethereum post-Merge), finality is deterministic after validator attestations.  
+
+### 问题 39: Recall that one may launch 34% attack in PoS. What are the attacks and how can we counteract such attacks?  
+
+A 34% attack in PoS involves controlling one-third of validators to disrupt consensus (e.g., delay finality); countermeasures include slashing malicious validators’ stakes and social coordination.  
+
+### 问题 40: What is Gas in Ethereum? Why is it needed?  
+
+Gas is Ethereum’s transaction fee unit, needed to limit computational resources, prevent infinite loops (halting problem), and deter malicious code execution.  
+
+### 问题 41: What is "optimistic rollup"?  
+
+Optimistic Rollup is a Layer 2 scaling solution for Ethereum that processes transactions off-chain, assuming validity, and posts compressed data on-chain with fraud proofs.  
+
+### 问题 42: What does it mean by "optimistic" here?  
+
+"Optimistic" means transactions are assumed valid, processed off-chain, and only challenged via fraud proofs if disputes arise, reducing on-chain computation.  
+
+### 问题 43: How can we guarantee the validity of transactions submitted via rollup?  
+
+Validity is guaranteed by fraud proofs, allowing anyone to challenge invalid transactions within a dispute period, reverting them if proven invalid.  
+
+### 问题 44: What’re the differences between rollup and the Lightning Network?  
+
+Rollup processes general Ethereum transactions (e.g., smart contracts) off-chain with fraud or ZK proofs, while Lightning Network focuses on Bitcoin payment channels, settling balances on-chain.  
+
+### 问题 45: What happened in the 2016 DAO hack? What was the bug? What did the developers do to fix the bug?  
+
+The 2016 DAO hack exploited a reentrancy bug, allowing an attacker to drain 3.6 million ETH; developers hard-forked Ethereum to recover funds, creating Ethereum Classic.  
+
+### 问题 46: How did it happen?  
+
+The DAO hack exploited a reentrancy vulnerability, where a malicious contract repeatedly called the withdrawal function before the balance updated, draining funds.  
+
+### 问题 47: What is the vulnerability that results in the hack?  
+
+The vulnerability was reentrancy, allowing a malicious contract to repeatedly call back into the DAO’s withdrawal function before updating the balance.  
+
+### 问题 48: How could we solve it?  
+
+Reentrancy can be solved by using mutex locks, updating state before external calls, or using checked functions like `transfer` instead of `call`.  
+
+### 问题 49: What’s the consequence to Ethereum?  
+
+The DAO hack led to a hard fork, splitting Ethereum into Ethereum (ETH, reversing the hack) and Ethereum Classic (ETC, preserving the original chain).  
+
+### 问题 50: Ethereum shifted from PoW to PoS. What is PoS (in Ethereum)? Is it better than PoW?  
+
+PoS in Ethereum uses staked ETH for validator consensus, reducing energy use compared to PoW, which is more efficient but faces “nothing at stake” risks.  
+
+### 问题 51: What does it mean by "nothing at stake" in a PoS blockchain network like Ethereum?  
+
+“Nothing at stake” means PoS validators risk no loss for supporting invalid chains, potentially disrupting consensus, mitigated by slashing penalties.  
+
+### 问题 52: Is the shift from PoW to PoS a layer 1 or layer 2 scaling solution?  
+
+The PoW to PoS shift is a Layer 1 scaling solution, altering Ethereum’s core consensus protocol.  
+
+## 5. DAO 相关问题
+
+### 问题 53: What is the full name of "DAO"?  
+
+DAO stands for Decentralized Autonomous Organization, a blockchain-based entity governed by smart contracts and community voting without central authority.  
+
+### 问题 54: What is the principal-agent problem? What are the agency costs?  
+
+The principal-agent problem occurs when agents prioritize self-interest over principals; agency costs are expenses to monitor and align interests.  
+
+### 问题 55: What is the agency conflict? 
+
+Agency conflict arises when agents favor their interests over principals. 
+
+### 问题 56: How do DAOs mitigate this agency conflict?  
+
+DAOs mitigate agency conflict by using transparent, automated smart contract governance and community voting to reduce centralized control and align interests.  
+
+### 问题 57: What are the new challenges?  
+
+New DAO challenges include low voter participation, smart contract vulnerabilities (e.g., DAO hack), and uncertain regulatory compliance.  
+
+### 问题 58: What are some common voting approaches?  
+
+Common DAO voting approaches include token-based (weighted by token holdings), quadratic (votes cost quadratically), and reputation-based voting.  
+
+### 问题 59: What’s quadratic voting?  
+
+Quadratic voting is a system where vote costs increase quadratically (e.g., 1 vote costs 1 token, 2 votes cost 4 tokens), balancing influence and reducing wealthy voter dominance.  
+
+### 问题 60: Does it prevent Sybil attack?  
+
+Quadratic voting partially mitigates Sybil attacks by increasing the cost of multiple identities, but additional measures like identity verification are needed.  
+
+## 6. Hyperledger Fabric 相关问题
+
+### 问题 61: Why are Bitcoin/Ethereum-like blockchains not ideal for most business applications?  
+
+Bitcoin and Ethereum are public, permissionless blockchains with slow speeds, high costs, and public data, unsuitable for businesses needing privacy and compliance. Hyperledger Fabric, a permissioned blockchain, addresses these.  
+
+### 问题 62: How does frameworks like Fabric facilitate the adoption of blockchain into businesses?  
+
+Hyperledger Fabric provides modular, permissioned blockchain frameworks with privacy, scalability, and customizable consensus, enabling secure business adoption.  
+
+### 问题 63: What is a channel in a Fabric network?  
+
+A channel is a private subnet in Hyperledger Fabric with a separate ledger, allowing only channel members to access confidential transactions and data.  
+
+### 问题 64: What problem does it solve? (CA in Hyperledger Fabric)  
+
+The Certificate Authority (CA) in Hyperledger Fabric solves identity management by issuing digital certificates to authenticate nodes and users, ensuring authorized access.  
+
+### 问题 65: What benefit does it bring? (Channel in Hyperledger Fabric)  
+
+Channels provide data privacy by isolating transactions and ledgers, ensuring only authorized channel members can access sensitive business data.  
+
+### 问题 66: In Fabric, certificate authority is needed for identity management. Why is it important? Recall what’s man-in-the-middle attack?  
+
+Certificate Authority ensures trusted identities by issuing certificates, preventing man-in-the-middle attacks where attackers impersonate legitimate parties to intercept data(攻击者冒充合法方拦截数据).  
+
+### 问题 67: Do we need to worry a lot about Byzantine faults?  
+
+In Hyperledger Fabric, Byzantine faults are less concerning due to its permissioned nature with pre-approved nodes, though consensus like Raft addresses potential faults.  
+
+### 问题 68: What’s the other type of fault?  
+
+The other type is a crash fault, where a node fails or stops responding but does not act maliciously, unlike Byzantine faults.  
+
+### 问题 69: What’s Raft? Can it counteract Sybil attack?  
+
+Raft is a crash-fault-tolerant consensus algorithm in Hyperledger Fabric for ordering transactions. It doesn’t counteract Sybil attacks, as Fabric’s permissioned network prevents unauthorized identities.  
+
+### 问题 70: How does Raft ordering service work? At most how many failed nodes can it withstand?  
+
+Raft orders transactions via a leader-based consensus, other nodes sync with the leader, tolerating up to (N-1)/2 failed nodes, where N is the total number of nodes.  
+
+### 问题 71: Can Raft solve the Byzantine Generals Problem?  
+
+Raft cannot solve the Byzantine Generals Problem, as it assumes non-malicious crash faults, not malicious behavior.  
+
+## 7. 区块链应用相关问题
+
+### 问题 72: Are all of these volatile(波动)? (Payment tokens)  
+
+Not all payment tokens are volatile; cryptocurrencies like Bitcoin are volatile, but stablecoins like USDT, pegged to assets, maintain stable value.  
+
+### 问题 73: We can categorise the token into different types?
+
+Tokens include payment tokens (e.g., Bitcoin), utility tokens (e.g., governance), security tokens (investment assets), and non-fungible tokens (NFTs).  
+
+### 问题 74: What are stablecoins?  
+
+Stablecoins are cryptocurrencies pegged to stable assets (e.g., USD, gold) to minimize price volatility, used in trading, payments, and DeFi (e.g., USDT, USDC).  
+
+### 问题 75: What are the different types? What’s its benefit?  
+
+Stablecoin types include fiat-backed (e.g., USDT), crypto-backed (e.g., DAI), and algorithmic (e.g., UST). Benefits are price stability, liquidity, and fast cross-border transactions.  
+稳定币类型包括法币支持（例如 USDT）、加密支持（例如 DAI）和算法型（例如 UST）。
+
+### 问题 76: What is the difference between NFT and other tokens like Bitcoin/Ether?  
+
+NFTs are unique, indivisible digital assets (e.g., art), while Bitcoin and Ether are fungible, interchangeable, and divisible tokens.  
+
+### 问题 77: What is so special about it?  
+
+NFTs are special for their uniqueness, verifiable blockchain ownership, and ability to represent digital or physical assets, enabling use cases like digital art and gaming.  
+
+### 问题 78: What is an SFT (ERC-1155)?  
+
+SFT (Semi-Fungible Token, ERC-1155) is an Ethereum standard combining fungible and non-fungible properties, managing multiple token types in one contract (e.g., game items).  
+
+### 问题 79: What’s its use case?  
+
+ERC-1155 is used in gaming (fungible currency and non-fungible items) and supply chains (fungible batches and unique assets).  
+
+### 问题 80: What is a rentable NFT (ERC-4907)?  
+
+A rentable NFT (ERC-4907) is an Ethereum standard allowing temporary transfer of NFT usage rights without transferring ownership, enabling rental markets.  
+
+### 问题 81: How does it help with the current landscape of NFTs?  
+
+ERC-4907 enhances NFT accessibility by allowing rentals (e.g., for gaming or virtual land), reducing costs and expanding use cases.  
+ERC-4907 通过允许租用 NFT（例如用于游戏或虚拟土地）增强可访问性，降低成本并扩展用例。
+
+### 问题 82: Metaverse: the role of blockchain - data continuity; transaction.  
+
+Blockchain ensures data continuity (persistent identities and assets) and secure, transparent transactions in the metaverse.  
+
+---
+
 ## 1. 货币基础 (Money Fundamentals)
 
 ### 1.1 货币的定义与历史演变 (Definition and Historical Evolution of Money)
@@ -138,6 +495,7 @@ Blockchain addresses the dependence on centralized institutions in traditional f
 #### 2.2.1 白皮书发布 (White Paper Publication)
 
 Bitcoin was proposed by an anonymous person or team, **Satoshi Nakamoto**, on November 1, 2008, through a white paper titled "Bitcoin: A Peer-to-Peer Electronic Cash System." Its main features include:
+
 - **Peer-to-Peer (P2P)**: Direct transactions without intermediaries.
 - **No Trusted Third Party**: Not dependent on banks or governments.
 - **Double-spending Prevention**: Using blockchain to ensure the same Bitcoin cannot be used repeatedly.
@@ -150,6 +508,7 @@ Bitcoin was proposed by an anonymous person or team, **Satoshi Nakamoto**, on No
 #### 2.2.2 P2P网络 (P2P Network)
 
 Bitcoin is based on a **P2P Network**, similar to file-sharing systems (like BitTorrent). The characteristics of P2P networks include:
+
 - Decentralization, with no single control point.
 - Equal nodes, jointly maintaining the network.
 - The document mentions **Napster** (an early P2P music sharing platform) to illustrate P2P technology applications before Bitcoin.
@@ -162,6 +521,7 @@ Bitcoin is based on a **P2P Network**, similar to file-sharing systems (like Bit
 #### 2.5.1 账户与密钥 (Accounts and Keys)
 
 Bitcoin users manage accounts through **Public/Private Key Pairs**:
+
 - **Private Key**: A secret number used to sign transactions and prove ownership.
 - **Public Key**: Generated from the private key through elliptic curve cryptography, used to receive Bitcoin.
 - **Bitcoin Address**: Generated by hashing the public key, 160 bits in length, including a checksum.
@@ -173,6 +533,7 @@ Bitcoin users manage accounts through **Public/Private Key Pairs**:
 #### 2.5.2 区块链与共识 (Blockchain and Consensus)
 
 Bitcoin transactions are recorded on the **Blockchain**, similar to the oral ledger of **Rai Stone** from **Yap Island**:
+
 - Transactions are ordered through a **Consensus Algorithm** to prevent tampering.
 - **Byzantine Generals Problem (BGP)**: Solving the trust problem in distributed systems, ensuring the majority of nodes reach an agreement.
 - **Proof-of-Work (PoW)**: Miners compete for the right to record by solving computational puzzles (Hashcash), with winners adding new blocks and receiving **Block Rewards**.
@@ -191,6 +552,7 @@ Bitcoin transactions are recorded on the **Blockchain**, similar to the oral led
 #### 2.5.3 双重支付问题 (Double-Spending Problem)
 
 **Double-spending** is a challenge for digital currencies that Bitcoin solves through:
+
 - **P2P Network**: All nodes verify transactions, preventing repeated payments.
 - **Proof-of-Work**: Tampering with transactions requires recalculating all subsequent blocks, which is extremely costly.
 - **Confirmation**: Transactions need to wait for 6 block confirmations (about 1 hour) to reduce the risk of tampering.
@@ -234,9 +596,10 @@ When multiple miners in the Bitcoin network simultaneously mine new blocks (a fo
 - With control of the majority of computing power, the attacker's private chain may grow faster than the public chain (Main Chain).
 
 If a miner or group of miners controls more than 50% of the total computing power (Hashrate) of the Bitcoin network, theoretically they could:
+
 - Prevent new transactions from being confirmed.
 - Double-spend their own Bitcoin (by transacting on different branches and making their branch the longest chain).
-However, the cost of launching a 51% attack is extremely high and would damage the value of Bitcoin, making it economically unfeasible for attackers in most cases.
+  However, the cost of launching a 51% attack is extremely high and would damage the value of Bitcoin, making it economically unfeasible for attackers in most cases.
 
 - **Explanation**: If bad actors control more than half of the mining power, they could theoretically cheat, but the cost would be very high.
 - **Example**: An attacker with 51% computing power could reverse their recent transaction and pay the same Bitcoin to someone else.
@@ -258,9 +621,10 @@ Approximately every four years (or precisely, every 210,000 blocks), the new Bit
 #### 2.5.9 矿工的激励机制 (Incentives of Miners)
 
 There are two main motivations for miners to participate in mining:
+
 1. **Block Reward**: Newly issued Bitcoin received after successfully mining a new block.
 2. **Transaction Fees**: Fees paid by transactions included in the block.
-These rewards encourage miners to invest computational resources in maintaining network security and processing transactions.
+   These rewards encourage miners to invest computational resources in maintaining network security and processing transactions.
 
 - **Explanation**: Miners provide computing power to earn new Bitcoin and transaction fees.
 - **Example**: A miner successfully packages a block containing 100 transactions, receiving both the block reward and the total fees of these 100 transactions.
@@ -277,6 +641,7 @@ Bitcoin uses the UTXO model to track Bitcoin ownership rather than an account ba
 #### 2.6.1 Taproot升级 (Taproot Upgrade)
 
 The **Taproot Upgrade** (implemented in 2021) is a **Soft Fork** of Bitcoin, implemented through **BIP 342** (Bitcoin Improvement Proposal):
+
 - **TapScript**: Extends the script language, supporting **Schnorr Signatures** and **Merkleized Abstract Syntax Trees (MAST)**.
 - Functions: Enhances transaction privacy, reduces complex contract costs, but is still not **Turing Complete**, unlike Ethereum that supports complex programs.
 
@@ -286,6 +651,7 @@ The **Taproot Upgrade** (implemented in 2021) is a **Soft Fork** of Bitcoin, imp
 #### 2.6.2 隔离见证 (SegWit)
 
 **Segregated Witness (SegWit)** (implemented in 2017) is a soft fork of Bitcoin that solves transaction capacity issues:
+
 - Separates signature data (Witness Data) from transaction data, increasing effective block capacity.
 - Fixes the **Transaction Malleability** problem, supporting subsequent extensions (like Lightning Network).
 - **Bitcoin SV (Satoshi's Vision)** (a 2018 **Hard Fork**): Opposes SegWit, advocates for larger blocks (128MB), led by Craig Wright (who claims to be Satoshi Nakamoto).
@@ -296,6 +662,7 @@ The **Taproot Upgrade** (implemented in 2021) is a **Soft Fork** of Bitcoin, imp
 #### 2.6.3 闪电网络 (Lightning Network)
 
 The **Lightning Network** is a **Layer 2** extension protocol for Bitcoin, solving problems of slow transactions and high fees:
+
 - **Payment Channel**: Two parties create a channel, recording multiple transactions, only going on-chain when opening (**Funding TX**) and closing (**Closing TX**) the channel.
 - Advantages:
   - Fast: Transactions are almost instant, without waiting for block confirmations.
@@ -313,6 +680,7 @@ The **Lightning Network** is a **Layer 2** extension protocol for Bitcoin, solvi
 #### 2.6.4 交易确认时间 (Transaction Confirmation Time)
 
 Bitcoin transactions need to wait for 6 block confirmations (about 1 hour), as explained in the white paper:
+
 - If an attacker controls q% of the network's **Hashrate**, waiting for z blocks ensures the attack success probability is below 0.1%:
   - q=10%, z=5.
   - q=30%, z=24.
@@ -324,6 +692,7 @@ Bitcoin transactions need to wait for 6 block confirmations (about 1 hour), as e
 ### 2.7 匿名性与假名性 (Anonymity and Pseudonymity)
 
 Bitcoin is not completely anonymous but rather exhibits **Pseudonymity**:
+
 - **Anonymity**: Completely hiding identity.
 - **Pseudonymity**: Using pseudonyms (like Bitcoin addresses) that can be tracked through on-chain analysis.
 
@@ -333,6 +702,7 @@ Bitcoin is not completely anonymous but rather exhibits **Pseudonymity**:
 ### 2.8 比特币的价值来源 (Source of Bitcoin's Value)
 
 Bitcoin's value comes from people's trust in it, similar to fiat currency:
+
 - **Bryan Routledge**: Bitcoin has value because "people think it has value."
 - **Medium of Exchange**: Bitcoin can be used for payments, but acceptance is limited.
 - **Store of Value**: Due to high volatility, its storage function is relatively weak.
@@ -448,7 +818,7 @@ PoS faces the "Nothing at Stake" problem: validators might simultaneously valida
   - Attackers generate multiple fake nodes or accounts, posing as legitimate participants in the network.
   - They participate in network voting, consensus, or data propagation, attempting to influence outcomes.
   - Decentralized systems rely on the honest behavior of most nodes; Sybil attacks undermine this trust through "strength in numbers."
-  
+
 - **Explanation**: A 33% attack is like minority shareholders causing disruption, while a 51% attack is like controlling shareholders manipulating a company.
 - **Example**: An attacker controlling 33% of ETH refuses to validate new blocks, pausing the network until the slashing mechanism takes effect.
 
@@ -738,11 +1108,13 @@ The document introduces several types of voting in DAOs (document pages 22-23):
 ### 4.7 背景：从公共区块链到私有区块链
 
 #### 4.7.1 公共区块链与私有区块链的区别 (Differences Between Public and Private Blockchains)
+
 - **Public Blockchain**: Anyone can join, data is completely open, typical examples are Bitcoin and Ethereum. Characterized by high degree of decentralization, but slower transaction speeds and lower privacy.
 - **Private Blockchain**: Only authorized participants can join, data access is restricted, suitable for enterprise scenarios. Hyperledger Fabric is a typical private blockchain framework, emphasizing permission management and efficiency.
 - **Transition in Course Materials**: The course materials transition from public blockchains (such as Bitcoin's on-chain/off-chain governance) to private blockchains, highlighting Hyperledger Fabric's applications in enterprises, such as reducing agency costs and supporting DAO governance.
 
 #### 4.7.2 Hyperledger Fabric简介
+
 - **Definition**: Hyperledger Fabric is an open-source enterprise-grade blockchain framework hosted by the Linux Foundation, designed specifically for private and consortium chains, supporting modular architecture and permission management.
 - **Characteristics**:
   - **Permissioned**: Only authenticated participants can access the network, suitable for scenarios requiring privacy and compliance.
@@ -754,7 +1126,9 @@ The document introduces several types of voting in DAOs (document pages 22-23):
 ### 4.8 Hyperledger Fabric的核心组件
 
 #### 4.8.1 架构概述 (Architecture Overview)
+
 Hyperledger Fabric's architecture consists of multiple modular components that jointly support the operation of a distributed ledger. The main components are:
+
 - **Nodes**: Participants in the network, divided into:
   - **Client Nodes**: Submit transaction proposals.
   - **Peer Nodes**: Store ledger data, execute chaincode, validate transactions.
@@ -767,6 +1141,7 @@ Hyperledger Fabric's architecture consists of multiple modular components that j
 **Simple Explanation**: A channel is like a meeting room that only specific members can enter, chaincode is the "rulebook" executed in the meeting room, and MSP is the "security" checking the identities of attendees.
 
 #### 4.8.2 通道 (Channels)
+
 - **Definition**: Channels are the core mechanism for implementing data privacy in Hyperledger Fabric, with each channel having independent ledgers and chaincode.
 - **Functions**:
   - Limiting data access: Only channel members can see transactions.
@@ -774,6 +1149,7 @@ Hyperledger Fabric's architecture consists of multiple modular components that j
 - **Example**: In a pharmaceutical supply chain, manufacturers and hospitals can share drug production data within one channel, while pharmacies and hospitals share sales data within another channel, without interference.
 
 #### 4.8.3 链码 (Chaincode)
+
 - **Definition**: Chaincode is a smart contract in Hyperledger Fabric, written in languages like Go or JavaScript, running on peer nodes.
 - **Functions**:
   - Defining business logic: Such as creating assets, querying status, transferring ownership.
@@ -790,6 +1166,7 @@ Hyperledger Fabric's architecture consists of multiple modular components that j
 - **Example**: In a used car trading platform, chaincode can define "vehicle transfer" logic, recording information such as vehicle ID, color, mileage, owner, etc., ensuring transactions are transparent and immutable.
 
 #### 4.8.4 成员服务提供者 (Membership Service Provider, MSP)
+
 - **Definition**: MSP is responsible for identity management and access control, using Public Key Infrastructure (PKI) to assign digital certificates to nodes.
 - **Functions**:
   - **Authentication**: Ensuring only authorized users can submit transactions.
@@ -798,7 +1175,9 @@ Hyperledger Fabric's architecture consists of multiple modular components that j
 - **Example**: In financial scenarios, MSP ensures that only banks and regulatory agencies can access loan records, preventing unauthorized access.
 
 ### 4.9 交易流程 (Transaction Flow)
+
 The transaction flow in Hyperledger Fabric includes the following steps:
+
 1. **Proposal**: Client submits transaction proposals through SDK, including chaincode invocations and input parameters.
 2. **Simulation**: Peer nodes execute chaincode, generating read-write sets, but do not update the ledger.
 3. **Endorsement**: Peer nodes sign the read-write sets according to endorsement policies.
@@ -810,6 +1189,7 @@ The transaction flow in Hyperledger Fabric includes the following steps:
 **Example**: In asset management, users submit "create asset" requests through web pages, chaincode validates inputs (such as asset ID, color), peer nodes simulate execution, orderer nodes generate blocks, and finally the ledger is updated.
 
 ### 4.10 Hyperledger Fabric与DAO的结合
+
 - **DAO Governance Support**:
   - Hyperledger Fabric implements decentralized decision-making through chaincode, such as voting mechanisms.
   - Channels support multi-party collaboration, reducing agency conflicts.
@@ -822,7 +1202,9 @@ The transaction flow in Hyperledger Fabric includes the following steps:
 - **Example**: A DAO uses Hyperledger Fabric to manage an investment fund, where investors vote on fund allocation through chaincode, all transactions are recorded on the ledger, and MSP restricts non-member access, ensuring transparency and fairness.
 
 ### 4.11 新挑战与成本 (New Challenges and Costs)
+
 The course materials mention new costs introduced by DAOs and private blockchains, and Hyperledger Fabric is no exception:
+
 - **Governance Complexity**: Multi-party collaboration may lead to low voting participation or control by a minority.
 - **Technical Risks**: Chaincode vulnerabilities may result in data leakage or system crashes.
 - **Legal Compliance**: Private blockchains need to meet enterprise regulatory requirements, such as data privacy regulations.
@@ -833,15 +1215,22 @@ The course materials mention new costs introduced by DAOs and private blockchain
 **Example**: In a supply chain DAO, low participation may result in critical proposals receiving no votes; chaincode vulnerabilities may expose sensitive data, requiring regular audits.
 
 ### 4.12 课件中的代码分析 (Analysis of Code in Course Materials)
+
 The course materials showcase Hyperledger Fabric chaincode and web application code for asset management. Here's a detailed analysis:
+
 - **Chaincode Functions**:
+
   - `CreateAsset`: Creates assets with parameters including ID, color, size, owner, value.
   - `ReadAsset`: Queries asset status, returning data in JSON format.
+
 - **Web Application**:
+
   - `createHandler`: Loads the web page for creating assets (create.html).
   - `createResultHandler`: Processes user input, calls chaincode to create assets, displays results.
   - `renderTemplate`: Renders HTML templates, showing asset information.
+
 - **Asset Structure**:
+
   ```go
   type Asset struct {
       AppraisedValue int    `json:"AppraisedValue"`
@@ -851,6 +1240,7 @@ The course materials showcase Hyperledger Fabric chaincode and web application c
       Size           string `json:"Size"`
   }
   ```
+
   - Fields are arranged alphabetically, ensuring JSON serialization consistency.
   - Can be extended to other scenarios, such as used car trading (adding a "mileage" field).
 
@@ -861,13 +1251,16 @@ The course materials showcase Hyperledger Fabric chaincode and web application c
 ### 5.1 代币与加密货币概述 (Overview of Tokens and Cryptocurrencies)
 
 #### 5.1.1 代币与货币的区别 (Differences Between Tokens and Coins)
+
 - **Coins**: Serve as a medium of exchange, used for payments or transactions. For example, Bitcoin is a typical cryptocurrency designed to serve as currency in a decentralized network.
 - **Tokens**: Typically function as assets, representing specific uses or interests. Tokens operate on blockchains with diverse functions, such as accessing services or representing ownership.
 
 **Example**: Bitcoin is a coin that can be directly used to purchase goods; ERC-20 tokens on Ethereum (such as Chainlink) are tokens used to pay for smart contract services.
 
 #### 5.1.2 代币分类 (Token Classification)
+
 ##### 5.1.2.1 支付代币 (Payment Tokens)
+
 - **Definition**: Cryptocurrencies used for payments, emphasizing privacy and decentralization. Bitcoin is the pioneer of payment tokens.
 - **Characteristics**:
   - Serve as a medium of exchange, but with low recognition from governments and banks.
@@ -875,43 +1268,52 @@ The course materials showcase Hyperledger Fabric chaincode and web application c
 - **Example**: Using Bitcoin to purchase coffee at supporting merchants, but the price may change due to market fluctuations.
 
 ##### 5.1.2.2 法定加密货币与稳定币 (Fiat Cryptocurrencies and Stablecoins)
+
 - **Definition**: Stablecoins are cryptocurrencies pegged to fiat currencies, designed to reduce volatility. Fiat cryptocurrencies refer to digital currencies backed by governments (not detailed in the document, supplementary information follows).
 - **Supplementary Information**: Stablecoins like USDT (Tether) are pegged 1:1 with the US dollar, widely used in trading to avoid price fluctuations. Fiat cryptocurrencies like China's digital yuan (e-CNY) are issued by central banks.
 - **Characteristics**: Stablecoins have low volatility, suitable for daily transactions; fiat cryptocurrencies are regulated by governments with clear legal status.
 - **Example**: Using USDT to purchase other tokens on cryptocurrency exchanges, with stable prices; using digital yuan for online payments.
 
 ##### 5.1.2.3 证券代币 (Security Tokens)
+
 - **Definition**: Tokens representing traditional financial assets (such as stocks, bonds), regulated by securities laws (mentioned but not explained in the document).
 - **Supplementary Information**: Security tokens record ownership through blockchain, increasing transaction transparency and efficiency, but must comply with strict regulatory requirements.
 - **Characteristics**: Can represent company shares, real estate, and other assets, with high liquidity but strict regulation.
 - **Example**: A company issues security tokens, allowing investors to purchase company shares through blockchain, similar to stocks but stored in digital form.
 
 ##### 5.1.2.4 实用代币 (Utility Tokens)
+
 - **Definition**: Tokens used to access specific platforms or services (mentioned but not detailed in the document).
 - **Supplementary Information**: Utility tokens grant holders the right to use products or services, typically not intended as investment tools.
 - **Characteristics**: Strong functionality, usually do not represent asset ownership.
 - **Example**: Golem tokens (GNT) on Ethereum used to pay for decentralized computing services.
 
 ##### 5.1.2.5 非同质化代币 (Non-Fungible Tokens, NFTs)
+
 - **Definition**: Tokens representing unique digital assets (such as artwork, virtual real estate) that cannot be interchanged and are recorded on the blockchain.
 - **Characteristics**: Each NFT has uniqueness, with ownership recorded on blockchain, commonly used for digital collectibles or game assets.
 - **Example**: Purchasing a piece of digital art (such as Beeple's NFT work), with ownership recorded on the Ethereum blockchain.
 
 ### 5.2 加密货币相关犯罪 (Cryptocurrency-Related Crimes)
+
 #### 5.2.1 规模与影响 (Scale and Impact)
+
 - **Research Data** (Foley et al., 2019):
   - About 25% of Bitcoin users are involved in illegal activities.
   - Approximately $76 billion in illegal transactions annually (46% of Bitcoin transactions), close to the size of US and European drug markets.
 - **Trend**: The proportion of illegal transactions has decreased with increased mainstream interest and the emergence of more opaque cryptocurrencies (such as Monero).
 
 #### 5.2.2 案例 (Cases)
+
 - **2016 Bitcoin Theft**: The US Department of Justice recovered $3.6 billion in stolen Bitcoin, the largest financial seizure in history.
 - **2024 Ethereum Attack**: Two brothers stole $25 million in 12 seconds by attacking the Ethereum blockchain, involving wire fraud and money laundering.
 
 **Example**: Hackers exploit cryptocurrency anonymity to purchase illegal goods on the dark web, while law enforcement agencies track fund flows through blockchain analysis.
 
 ### 5.3 全球加密货币监管 (Global Cryptocurrency Regulation)
+
 The document shows the global regulatory status of cryptocurrencies (as of November 2021):
+
 - **Absolute Ban**: Some countries (such as China) prohibit all cryptocurrency transactions.
 - **Implicit Ban**: No explicit legislation prohibiting cryptocurrencies, but indirect restrictions through limiting banking services, etc.
 - **Regulated**: Many countries (such as the United States) regulate cryptocurrencies through taxation, Anti-Money Laundering, and Anti-Terrorism Financing laws.
@@ -922,9 +1324,11 @@ The document shows the global regulatory status of cryptocurrencies (as of Novem
 **Example**: In the United States, crypto transactions must be reported to the IRS for taxation; in China, individuals holding cryptocurrencies may face legal risks.
 
 ### 5.5 Zcash 与零知识证明 (Zcash and Zero-Knowledge Proof)
+
 Zcash is a privacy-focused payment token; the document introduces its features and zero-knowledge proof.
 
 #### 5.5.1 Zcash 特点 (Zcash Features)
+
 - **Based on Bitcoin**: Zcash inherits Bitcoin's block reward and fixed total supply.
 - **Privacy**: Implements selective disclosure through encryption technology, different from Bitcoin's complete transparency.
 - **Address Types**:
@@ -935,6 +1339,7 @@ Zcash is a privacy-focused payment token; the document introduces its features a
 **Example**: Alice uses Zcash's shielded address to transfer funds to Bob; the transaction amount and addresses are not visible to the public, but Bob can verify receipt of the funds.
 
 #### 5.5.2 零知识证明 (Zero-Knowledge Proof)
+
 - **Definition**: A cryptographic technique allowing one party (the prover) to prove to another party (the verifier) that certain information is true without revealing the specific information.
 - **Simple Explanation**: Like proving you know a password without saying the password itself.
 - **Example (provided in the document)**:
@@ -945,22 +1350,27 @@ Zcash is a privacy-focused payment token; the document introduces its features a
 **Supplementary Information**: Zcash uses zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge), which are computationally efficient and suitable for blockchain privacy protection.
 
 ### 5.6 加密货币相关犯罪 (Cryptocurrency-Related Crimes)
+
 #### 5.6.1 规模与影响 (Scale and Impact)
+
 - **Research Data** (Foley et al., 2019):
   - About 25% of Bitcoin users are involved in illegal activities.
   - Approximately $76 billion in illegal transactions annually (46% of Bitcoin transactions), close to the size of US and European drug markets.
 - **Trend**: The proportion of illegal transactions has decreased with increased mainstream interest and the emergence of more opaque cryptocurrencies (such as Monero).
 
 #### 5.6.2 案例 (Cases)
+
 - **2016 Bitcoin Theft**: The US Department of Justice recovered $3.6 billion in stolen Bitcoin, the largest financial seizure in history.
 - **2024 Ethereum Attack**: Two brothers stole $25 million in 12 seconds by attacking the Ethereum blockchain, involving wire fraud and money laundering.
 
 **Example**: Hackers exploit cryptocurrency anonymity to purchase illegal goods on the dark web, while law enforcement agencies track fund flows through blockchain analysis.
 
 ### 5.7 最大可提取价值 (MEV Exploits)
+
 The document introduces MEV (Maximal Extractable Value), which is the practice of extracting additional profits by reordering blockchain transactions.
 
 #### 5.7.1 基本概念 (Basic Concepts)
+
 - **Definition**: MEV is the additional value that validators (or miners) can obtain by manipulating transaction order, inserting, or excluding transactions.
 - **Origin**: Originated from miner behavior in Proof of Work (PoW).
 - **Realized Economic Value**: The actual MEV profits obtained.
@@ -969,6 +1379,7 @@ The document introduces MEV (Maximal Extractable Value), which is the practice o
 **Example**: Miners place high gas fee transactions at the beginning of blocks, prioritizing them to earn more fees.
 
 #### 5.7.2 套利 (Arbitrage)
+
 - **Definition**: Profiting from price differences in different markets, considered "benign MEV."
 - **Example (Stock Arbitrage)**:
   - Stock price is $100 at exchange A, $99 at exchange B.
@@ -983,6 +1394,7 @@ The document introduces MEV (Maximal Extractable Value), which is the practice o
 **Example**: An arbitrageur discovers that token A's price in a Uniswap pool is lower than the market, buys A and sells it on another exchange for profit.
 
 #### 5.7.3 前置交易 (Front-Running)
+
 - **Definition**: Profiting by inserting one's own transaction before another transaction based on advance knowledge, considered malicious MEV.
 - **Example (Stock Market)**:
   - A broker learns that a client will purchase 500,000 shares (price $100).
@@ -1025,13 +1437,17 @@ The document introduces MEV (Maximal Extractable Value), which is the practice o
 ### 5.9 元宇宙概述 (Overview of Metaverse)
 
 #### 5.9.1 元宇宙的定义 (Definition of Metaverse)
+
 The document quotes Matthew Ball's (2022) definition, describing the metaverse as:
+
 - **Definition**: A massive, interoperable network of real-time rendered 3D virtual worlds that users can experience synchronously and persistently, with a sense of presence. It maintains continuity of data, including identity, history, entitlements, objects, communications, and payments.
 - **Simple Explanation**: The metaverse is a virtual, real-world-like digital space where users can interact, trade, and live as they would in reality, with data remaining consistent across different platforms.
 - **Example**: In the metaverse game Decentraland, users can purchase virtual land, build houses, and use the same digital identity across different virtual worlds.
 
 #### 5.9.2 元宇宙与远程工作 (Metaverse and Work From Home)
+
 The document mentions that the metaverse can enhance the remote work (Work From Home, WFH) experience:
+
 - **Virtual Meetings**: Users can display work content through shared virtual screens, enhancing interactivity.
 - **Team Connection**: Users interact with colleagues in virtual spaces, such as through virtual gestures (like thumbs-up) to establish connections, providing an immersive experience.
 - **Example**: Using Oculus Workrooms, team members can present PowerPoint slides in a virtual meeting room and interact in real-time, as if they were in the same office.
@@ -1039,12 +1455,16 @@ The document mentions that the metaverse can enhance the remote work (Work From 
 ### 5.10 元宇宙中的经济活动 (Economic Activities in the Metaverse)
 
 #### 5.10.1 经济活动的必然性 (Inevitability of Economic Activities)
+
 The document points out that economic activities in the metaverse are inevitable, not limited to financial payments but also including the trading of digital assets.
+
 - **Simple Explanation**: The metaverse, like the real world, requires economic behaviors such as buying, selling, and leasing, involving virtual goods and services.
 - **Example**: On the Roblox platform, users purchase virtual Gucci bags (worth approximately $4,115) to decorate their virtual characters.
 
 #### 5.10.2 区块链的作用 (Role of Blockchain)
+
 Blockchain provides a trust-less environment in the metaverse:
+
 - **Immutable Ledger**: Blockchain records all transactions, ensuring transparency and immutability.
 - **Trust-less Environment**: No intermediaries needed; users can trade directly, reducing fraud risk.
 - **Example**: In Decentraland, purchased virtual land is recorded on the Ethereum blockchain, and ownership can be verified by anyone.
@@ -1054,17 +1474,20 @@ Blockchain provides a trust-less environment in the metaverse:
 ### 5.11 NFTs 和 SFTs 在元宇宙中的作用 (The Role of NFTs and SFTs in the Metaverse)
 
 #### 5.11.1 非同质化代币 (Non-Fungible Tokens, NFTs)
+
 - **Definition**: NFTs are tokens representing unique digital assets (such as artwork, virtual real estate) that cannot be interchanged and are recorded on the blockchain.
 - **Role in the Metaverse**: NFTs serve as carriers of digital assets, supporting ownership and transactions in virtual worlds.
 - **Example**: In The Sandbox, users can purchase a virtual painting (NFT) that can be displayed or sold across different metaverse platforms.
 
 #### 5.11.2 半同质化代币 (Semi-Fungible Tokens, SFTs)
+
 - **Definition** (not detailed in the document, supplementary information follows): SFTs combine the characteristics of fungible tokens and non-fungible tokens. Initially fungible (interchangeable), they can become non-fungible (unique) under specific conditions.
 - **Simple Explanation**: SFTs are like "multi-purpose tickets" that are interchangeable at first but become unique souvenirs after use.
 - **Role in the Metaverse**: SFTs support flexible asset management, such as virtual event tickets or game items.
 - **Example**: In a metaverse concert, SFTs are sold as tickets (fungible) but transform into unique digital collectibles (non-fungible) after use.
 
 #### 5.11.3 跨链互操作性 (Cross-Chain Interoperability)
+
 - **Definition** (mentioned but not explained in the document): The ability of different blockchain networks to interact with data and assets.
 - **Simple Explanation**: Allowing NFTs or SFTs to circulate between different metaverses or blockchains, such as transferring from Ethereum to Solana.
 - **Additional Information**: Cross-chain bridges like Wormhole enable asset transfers between chains, enhancing interoperability in the metaverse.
@@ -1073,6 +1496,7 @@ Blockchain provides a trust-less environment in the metaverse:
 ### 5.12 GameFi 与玩赚模式 (GameFi and Play-to-Earn Model)
 
 #### 5.12.1 GameFi 定义 (Definition of GameFi)
+
 - **Definition**: GameFi combines gaming and decentralized finance (DeFi), using blockchain technology to achieve true ownership and financialization of in-game assets.
 - **Simple Explanation**: Players earn money in games and own virtual items that can be traded or used for financial activities.
 - **Characteristics**:
@@ -1082,7 +1506,9 @@ Blockchain provides a trust-less environment in the metaverse:
 - **Example**: In Axie Infinity, players breed virtual pets (NFTs), earn tokens (SLP) through battles, and can trade them on Uniswap.
 
 #### 5.12.2 DeFi 整合 (DeFi Integration)
+
 GameFi seamlessly integrates DeFi mechanisms, including:
+
 - **Staking**: Players lock tokens to receive rewards.
   - **Example**: In The Sandbox, staking SAND tokens to earn returns from virtual land.
 - **Farming**: Providing liquidity to pools to earn returns.
@@ -1095,16 +1521,19 @@ GameFi seamlessly integrates DeFi mechanisms, including:
 ### 5.13 元宇宙的挑战与未来 (Challenges and Future of the Metaverse)
 
 #### 5.13.1 技术与监管挑战 (Technical and Regulatory Challenges)
+
 - **Technical Challenges**: The metaverse requires powerful computing capabilities, real-time rendering, and low-latency network support; current technology is not yet fully mature.
 - **Regulatory Challenges**: The legal status of virtual assets and compliance issues in cross-border transactions (such as anti-money laundering) still need clarification.
 - **Example**: The EU's MiCA regulation (implemented in 2024) requires metaverse platforms to comply with crypto asset regulations.
 
 #### 5.13.2 分散的元宇宙 (Disjoint Metaverse)
+
 - **Issue**: The document suggests that the metaverse may become fragmented due to different technical standards, with companies like Apple, Huawei, and Microsoft each developing independent metaverses.
 - **Additional Information**: Lack of unified standards could lead to fragmented user experiences; cross-chain interoperability and open protocols (such as the Metaverse Standards Forum) are potential solutions.
 - **Example**: Virtual clothing purchased in Apple's metaverse may not be usable in Microsoft's metaverse.
 
 #### 5.13.3 虚拟与现实的连接 (Connection Between Virtual and Reality)
+
 - **Issue**: How do activities and assets in the metaverse connect with the real world?
 - **Additional Information**: Real-world laws (such as property law) and economic systems need to interface with the virtual world; ownership disputes over NFTs may require court decisions.
 - **Example**: A virtual Gucci bag in Roblox may be worth more than a physical bag, but its legal ownership remains unclear. 

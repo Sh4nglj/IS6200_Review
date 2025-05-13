@@ -257,11 +257,9 @@ SFT (Semi-Fungible Token, ERC-1155) is an Ethereum standard combining fungible a
 
 ### 问题 79: What’s its use case?  
 ERC-1155 is used in gaming (fungible currency and non-fungible items) and supply chains (fungible batches and unique assets).  
-ERC-1155 用于游戏（同质化货币和非同质化道具）和供应链（同质化批次和独特资产）。
 
 ### 问题 80: What is a rentable NFT (ERC-4907)?  
 A rentable NFT (ERC-4907) is an Ethereum standard allowing temporary transfer of NFT usage rights without transferring ownership, enabling rental markets.  
-可租用 NFT（ERC-4907）是以太坊标准，允许临时转移 NFT 使用权而不转移所有权，支持租赁市场。
 
 ### 问题 81: How does it help with the current landscape of NFTs?  
 ERC-4907 enhances NFT accessibility by allowing rentals (e.g., for gaming or virtual land), reducing costs and expanding use cases.  
@@ -269,4 +267,3 @@ ERC-4907 通过允许租用 NFT（例如用于游戏或虚拟土地）增强可�
 
 ### 问题 82: Metaverse: the role of blockchain - data continuity; transaction.  
 Blockchain ensures data continuity (persistent identities and assets) and secure, transparent transactions in the metaverse.  
-区块链确保元宇宙中的数据连续性（持久身份和资产）和安全、透明的交易。
