@@ -344,52 +344,15 @@ Bitcoin's value comes from people's trust in it, similar to fiat currency:
 
 ## 3. 以太坊 (Ethereum)
 
-### 3.1 比特币的扩展：彩色币与序数理论 (Bitcoin Extensions: Colored Coins and Ordinal Theory)
+### 3.1 比特币的扩展与以太坊 (Bitcoin Extensions and Ethereum)
 
-#### 3.1.1 彩色币（Colored Coins）
+比特币有多种扩展协议，如彩色币和序数理论，但这些扩展受限于比特币本身的编程能力。以太坊则提供了更完整的编程平台。
 
-Colored Coins are an extension protocol for Bitcoin, designed to give specific bitcoins additional properties, allowing them to represent assets or certificates, referred to as "Bitcoin 2.0."
+- **彩色币 (Colored Coins)**: 通过"着色"比特币来代表特定资产或凭证，可用于产权登记等场景。
+- **序数理论 (Ordinal Theory)**: 为每个聪（satoshi）分配唯一编号，使其具有非同质化特性，类似于NFT。
 
-- **Concept**: By marking ("coloring") portions of bitcoin, they can represent specific assets (such as real estate or stocks).
-- **Bitcoin units**:
-  - 1 BTC = 100 centi-BTC (cBTC)
-  - 1 BTC = 10^8 satoshi (sat)
-  - Lightning Network's smallest unit: 1 BTC = 10^11 milli-satoshi (msat)
-- **White paper**: Written by Yoni Assia, Vitalik Buterin, and others, proposing Bitcoin 2.X, the initial specification for Colored Coins.
-- **Mastercoin**: An early attempt to extend Bitcoin into a more complex blockchain platform, called "The Second Bitcoin."
-
-- **Explanation**: Colored Coins are like attaching a label to ordinary banknotes, indicating they represent ownership of a car.
-- **Example**: Alice uses 1 colored bitcoin to represent ownership of her property; transferring this 1 bitcoin transfers the property.
-
-#### 3.1.2 序数理论（Ordinal Theory）
-
-Ordinal Theory, proposed by Casey Rodarmor, achieves Bitcoin's non-fungible characteristics by assigning unique numbering (Ordinal Number) to each satoshi, similar to NFTs (Non-Fungible Tokens).
-
-- **Concept**:
-  - Each bitcoin contains 10^8 satoshis, and each satoshi can be numbered with two components:
-    - **Integer part**: The block height where the satoshi was generated.
-    - **Decimal part**: The offset of the satoshi within that block.
-  - **Numbering methods**:
-    - **Decimal Notation**: Such as 3891094.16797 (block height.offset).
-    - **Degree Notation**: Such as 3°111094′214″16797‴, representing cycle, block, transaction, and other hierarchical levels.
-    - **Percentile Notation**: Such as 99.999719490602545%, indicating the satoshi's position in the total Bitcoin supply.
-  - **Rarity classification**:
-    - **Common**: Ordinary satoshis that are not the first in their category.
-    - **Uncommon**: The first satoshi of each block.
-    - **Rare**: The first satoshi of each difficulty adjustment.
-    - **Epic**: The first satoshi of each halving.
-    - **Legendary**: The first satoshi of each cycle.
-    - **Mythic**: The first satoshi of the genesis block.
-  - **Cycle**: When halving (every 210,000 blocks) and difficulty adjustment (every 2,016 blocks) occur simultaneously, called a "Conjunction." Calculation:
-    - 210,000 ÷ 2,016 = 13125/126 ≈ 104.1667, integer solution is H=6 (the 6th halving, approximately 24 years later).
-- **Implementation**:
-  - **SegWit (Segregated Witness)**: Increases block capacity, supporting more data.
-  - **Taproot**: Supports storing metadata, used for inscriptions.
-  - **Inscription**: Embedding data (such as images) into satoshis, creating NFT-like assets.
-- **Transaction model**: Uses First-In, First-Out (FIFO), requiring careful transaction handling to preserve specific satoshis.
-
-- **Explanation**: Ordinal Theory is like attaching an ID card to each satoshi, making it unique and capable of representing distinct assets like artwork.
-- **Example**: Bob stores a digital painting on satoshi #110000.000000001 as an NFT for sale.
+- **解释**: 这些扩展尝试在比特币基础上构建更复杂的应用，但受限于比特币脚本语言的局限性。
+- **示例**: 某用户可能用1个彩色币代表其房产所有权；另一用户可能在特定聪上铭刻数字艺术作品。
 
 ### 3.2 以太坊概述 (Ethereum Overview)
 
@@ -936,6 +899,19 @@ The course materials showcase Hyperledger Fabric chaincode and web application c
 - **Characteristics**: Each NFT has uniqueness, with ownership recorded on blockchain, commonly used for digital collectibles or game assets.
 - **Example**: Purchasing a piece of digital art (such as Beeple's NFT work), with ownership recorded on the Ethereum blockchain.
 
+### 5.2 加密货币相关犯罪 (Cryptocurrency-Related Crimes)
+#### 5.2.1 规模与影响 (Scale and Impact)
+- **Research Data** (Foley et al., 2019):
+  - About 25% of Bitcoin users are involved in illegal activities.
+  - Approximately $76 billion in illegal transactions annually (46% of Bitcoin transactions), close to the size of US and European drug markets.
+- **Trend**: The proportion of illegal transactions has decreased with increased mainstream interest and the emergence of more opaque cryptocurrencies (such as Monero).
+
+#### 5.2.2 案例 (Cases)
+- **2016 Bitcoin Theft**: The US Department of Justice recovered $3.6 billion in stolen Bitcoin, the largest financial seizure in history.
+- **2024 Ethereum Attack**: Two brothers stole $25 million in 12 seconds by attacking the Ethereum blockchain, involving wire fraud and money laundering.
+
+**Example**: Hackers exploit cryptocurrency anonymity to purchase illegal goods on the dark web, while law enforcement agencies track fund flows through blockchain analysis.
+
 ### 5.3 全球加密货币监管 (Global Cryptocurrency Regulation)
 The document shows the global regulatory status of cryptocurrencies (as of November 2021):
 - **Absolute Ban**: Some countries (such as China) prohibit all cryptocurrency transactions.
@@ -1019,73 +995,34 @@ The document introduces MEV (Maximal Extractable Value), which is the practice o
 
 **Example**: A user submits a large buy order on Uniswap, MEV bots buy tokens first to drive up the price, then sell for profit.
 
-### 5.8 DeFi
+### 5.8 DeFi概述 (DeFi Overview)
 
-Decentralized Finance (DeFi) is a financial system based on blockchain technology that provides financial services through smart contracts without requiring traditional intermediaries (such as banks, brokers). DeFi utilizes decentralized blockchain networks (like Ethereum) to achieve transparent, open, and trustless financial operations.
+去中心化金融(DeFi)是基于区块链技术的金融系统，通过智能合约提供金融服务，无需传统中介机构如银行或经纪商。
 
-DeFi is like a "bank without people," where all financial services (such as lending, trading, saving) are completed through automatically running code (smart contracts), without requiring banks or companies to intervene. Anyone with a crypto wallet can participate, it's globally accessible, and operations are publicly recorded on the blockchain.
+- **核心特点**:
+  - **去中心化**: 没有中央机构控制，由分布式网络集体维护。
+  - **开放性**: 任何人无需身份验证即可参与，只需加密钱包。
+  - **透明性**: 所有交易记录公开可见，代码通常开源。
+  - **可组合性**: DeFi协议像"乐高积木"，可组合创建新服务。
+  - **自动化**: 智能合约自动执行金融操作，减少人工干预。
 
-#### 5.8.1 DeFi 的核心特点 (Core Features of DeFi)
+- **主要应用**:
+  - 去中心化交易所(DEX)
+  - 借贷平台
+  - 流动性挖矿
+  - 质押
+  - 稳定币
 
-1. 去中心化 (Decentralized)
-   - No central authority controls it; it runs on a distributed network maintained collectively by all participants.
-   - **Example**: In traditional banking, loans require bank approval; on the DeFi platform Aave, users automatically borrow and lend through smart contracts.
-2. 开放性 (Permissionless)
-   - Anyone can participate without identity verification or credit assessment, just needing a crypto wallet.
-   - **Example**: Global users can trade tokens through Uniswap (a decentralized exchange) without registering an account.
-3. 透明性 (Transparency)
-   - All transaction records are publicly viewable on the blockchain, code is typically open source, and anyone can verify it.
-   - **Example**: On the Compound platform, lending rates and fund pool status are visible in real-time.
-4. 可组合性 (Composability)
-   - DeFi protocols are like "Lego blocks" that can be combined to create new services.
-   - **Example**: Users collateralize ETH on MakerDAO to generate DAI stablecoins, then use DAI for trading on Uniswap.
-5. 自动化 (Automation)
-   - Smart contracts automatically execute financial operations, reducing human intervention and lowering costs.
-   - **Example**: On Yearn.Finance, smart contracts automatically optimize fund allocation to achieve the highest yields.
+- **风险**:
+  - 智能合约漏洞可能导致资金被盗
+  - 加密资产价格波动可能引起清算
+  - 监管不确定性
+  - 用户操作错误可能导致资金永久丢失
 
-#### 5.8.2 DeFi 的主要服务 (Main DeFi Services)
+- **实例**: Uniswap(去中心化交易所)、MakerDAO(稳定币发行)、Aave(借贷平台)
 
-1. 去中心化交易所 (DEX, Decentralized Exchange)
-2. 借贷 (Lending and Borrowing)
-3. 流动性挖矿 (Liquidity Farming)
-4. 质押 (Staking)
-5. 稳定币 (Stablecoins)
-6. 收益优化 (Yield Farming)
-
-#### 5.8.3 DeFi 的优势 (Advantages of DeFi)
-
-- **Low Cost**: No intermediaries needed, transaction fees are typically lower than traditional finance.
-- **Global Access**: Anyone with internet can use it, breaking geographical restrictions.
-- **Efficiency**: Transactions and settlements are almost instantaneous, without waiting for bank processing.
-- **Innovation**: New financial products and services rapidly emerge, such as Flash Loans.
-
-#### 5.8.4 DeFi 的风险 (Risks of DeFi)
-
-1. 智能合约漏洞 (Smart Contract Risks)
-   - Code errors may lead to stolen funds.
-   - **Example**: In 2021, Poly Network lost $600 million due to contract vulnerabilities (later recovered).
-2. 市场波动 (Market Volatility)
-   - Large price fluctuations in crypto assets may cause insufficient collateral value.
-   - **Example**: ETH price crashes could trigger liquidations on Aave.
-3. 监管不确定性 (Regulatory Uncertainty)
-   - Regulations for DeFi are still unclear in many countries, potentially facing legal risks.
-   - **Example**: The US SEC is investigating Uniswap's compliance.
-4. 用户错误 (User Errors)
-   - Lost private keys or operational mistakes may lead to permanent loss of funds.
-   - **Example**: Users incorrectly transferring to invalid addresses, with funds unrecoverable.
-
-#### 5.8.5 DeFi 在元宇宙和 GameFi 中的应用 (DeFi Applications in Metaverse and GameFi)
-
-- 元宇宙 (Metaverse): DeFi supports financial activities in virtual worlds, such as virtual land leasing or NFT trading.
-  - **Example**: In Decentraland, users purchase virtual real estate through DeFi lending protocols.
-- GameFi: DeFi mechanisms (such as staking, lending) integrated into games, allowing players to earn income through Play-to-Earn (P2E) models.
-  - **Example**: In Axie Infinity, players collateralize NFT pets to borrow tokens for game investments.
-
-#### 5.8.6 实际案例 (Real-world Cases)
-
-- **Uniswap**: A decentralized exchange where users can swap tokens and provide liquidity to earn fees.
-- **MakerDAO**: A protocol generating DAI stablecoins, where users collateralize crypto assets to control money supply.
-- **Aave**: A decentralized lending platform supporting deposits, loans, and flash loans for various assets.
+- **解释**: DeFi像"无人银行"，所有金融服务通过自动运行的代码(智能合约)完成，无需银行或公司介入。
+- **示例**: 用户在Aave平台存入ETH获得利息，或抵押ETH借出其他代币，整个过程通过智能合约自动执行，无需银行批准。
 
 ### 5.9 元宇宙概述 (Overview of Metaverse)
 
@@ -1172,4 +1109,4 @@ GameFi seamlessly integrates DeFi mechanisms, including:
 #### 5.13.3 虚拟与现实的连接 (Connection Between Virtual and Reality)
 - **Issue**: How do activities and assets in the metaverse connect with the real world?
 - **Additional Information**: Real-world laws (such as property law) and economic systems need to interface with the virtual world; ownership disputes over NFTs may require court decisions.
-- **Example**: A virtual Gucci bag in Roblox may be worth more than a physical bag, but its legal ownership remains unclear.
+- **Example**: A virtual Gucci bag in Roblox may be worth more than a physical bag, but its legal ownership remains unclear. 
