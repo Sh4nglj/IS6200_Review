@@ -1,13 +1,13 @@
-# Hyperledger Fabric Summary
+# S04-2 Private Chain
 
-## 1. 背景：从公共区块链到私有区块链 (Background: From Public Blockchain to Private Blockchain)
+## 1. 背景：从公共区块链到私有区块链
 
 ### 1.1 公共区块链与私有区块链的区别 (Differences Between Public and Private Blockchains)
 - **Public Blockchain**: Anyone can join, data is completely open, typical examples are Bitcoin and Ethereum. Characterized by high degree of decentralization, but slower transaction speeds and lower privacy.
 - **Private Blockchain**: Only authorized participants can join, data access is restricted, suitable for enterprise scenarios. Hyperledger Fabric is a typical private blockchain framework, emphasizing permission management and efficiency.
 - **Transition in Course Materials**: The course materials transition from public blockchains (such as Bitcoin's on-chain/off-chain governance) to private blockchains, highlighting Hyperledger Fabric's applications in enterprises, such as reducing agency costs and supporting DAO governance.
 
-### 1.2 Hyperledger Fabric简介 (Introduction to Hyperledger Fabric)
+### 1.2 Hyperledger Fabric简介
 - **Definition**: Hyperledger Fabric is an open-source enterprise-grade blockchain framework hosted by the Linux Foundation, designed specifically for private and consortium chains, supporting modular architecture and permission management.
 - **Characteristics**:
   - **Permissioned**: Only authenticated participants can access the network, suitable for scenarios requiring privacy and compliance.
@@ -16,7 +16,7 @@
   - **Privacy Protection**: Achieves data isolation through channels, ensuring sensitive information is only visible to specific participants.
 - **Example**: In supply chain management, Hyperledger Fabric can be used to track every step of a product from production to sale, with only relevant parties (such as suppliers, logistics companies) able to access corresponding data.
 
-## 2. Core Components of Hyperledger Fabric
+## 2. Hyperledger Fabric的核心组件
 
 ### 2.1 架构概述 (Architecture Overview)
 Hyperledger Fabric's architecture consists of multiple modular components that jointly support the operation of a distributed ledger. The main components are:
@@ -74,7 +74,7 @@ The transaction flow in Hyperledger Fabric includes the following steps:
 
 **Example**: In asset management, users submit "create asset" requests through web pages, chaincode validates inputs (such as asset ID, color), peer nodes simulate execution, orderer nodes generate blocks, and finally the ledger is updated.
 
-## 4. Hyperledger Fabric与DAO的结合 (Combination of Hyperledger Fabric and DAO)
+## 4. Hyperledger Fabric与DAO的结合
 - **DAO Governance Support**:
   - Hyperledger Fabric implements decentralized decision-making through chaincode, such as voting mechanisms.
   - Channels support multi-party collaboration, reducing agency conflicts.
@@ -120,23 +120,3 @@ The course materials showcase Hyperledger Fabric chaincode and web application c
   - Can be extended to other scenarios, such as used car trading (adding a "mileage" field).
 
 **Example**: In a used car trading platform, users input vehicle information (ID, color, mileage) through web pages, chaincode creates assets and stores them in the ledger, MSP verifies user identity, and results are displayed on the web page.
-
-## 7. 关键词中英对照 (Key Terms: Chinese-English Comparison)
-- **Hyperledger Fabric**: Hyperledger Fabric
-- **Public Blockchain**: 公共区块链
-- **Private Blockchain**: 私有区块链
-- **Permissioned**: 许可制
-- **Channels**: 通道
-- **Chaincode**: 链码
-- **Membership Service Provider (MSP)**: 成员服务提供者
-- **Ledger**: 账本
-- **World State**: 世界状态
-- **Endorsement Policy**: 背书策略
-- **Transaction Flow**: 交易流程
-- **Agency Costs**: 代理成本
-- **Information Asymmetry**: 信息不对称
-- **Accountability**: 问责制
-- **Governance Complexity**: 治理复杂性
-
-## 8. 总结 (Conclusion)
-Hyperledger Fabric is a powerful private blockchain framework that supports enterprise-level applications through components such as channels, chaincode, and MSP. When combined with DAOs, it can reduce agency costs and enhance governance transparency, but faces challenges in governance complexity, technical risks, and legal compliance. The code in the course materials demonstrates the application of chaincode in asset management, which can be extended to supply chain, finance, and other scenarios. Understanding Hyperledger Fabric requires mastering its modular architecture, transaction flow, and permission management mechanisms.

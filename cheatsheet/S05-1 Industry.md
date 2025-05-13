@@ -1,6 +1,6 @@
 # S05-1 Industry
 
-## 1. 代币与加密货币概述 (Overview of Tokens and Cryptocurrencies)
+## 1. Overview of Tokens and Cryptocurrencies
 
 ### 1.1 代币与货币的区别 (Differences Between Tokens and Coins)
 - **Coins**: Serve as a medium of exchange, used for payments or transactions. For example, Bitcoin is a typical cryptocurrency designed to serve as currency in a decentralized network.

@@ -14,22 +14,6 @@ Money serves as a medium of exchange, store of value, and unit of account, simpl
 
 **Supplementary**: Economist Milton Friedman mentioned in "Money Mischief" that the form of money has evolved from stones and feathers to paper currency and electronic data, and may exist in the future as "computer bytes".
 
-### 1.2 物物交换的历史 (Bartering History)
-
-Before the emergence of money, barter was the main form of transaction, but it was inefficient due to the problem of the "double coincidence of wants".
-
-- **古代物物交换 (Ancient Barter)**:
-  - Example: A farmer exchanging grain for pottery, but the pottery maker might not need grain, leading to transaction failure.
-- **现代物物交换 (Modern Barter)**:
-  - Example: During the 2022 Xi'an lockdown in China, residents exchanged cigarettes for cabbage or Nintendo Switch gaming consoles for instant noodles through social media.
-  - Platforms like **Bunz** (a Toronto-based barter community) facilitate modern barter, where users exchange clothing, furniture, and other items.
-  - **B2B物物交换 (Business-to-Business Bartering)**:
-    - Example: In 1990, Pepsico signed an agreement with the Soviet Union to exchange soft drink concentrate for vodka and merchant ships, valued at $3 billion.
-  - **媒体物物交换 (Media Barter)**:
-    - Example: Through **Capital Media Solutions**, businesses can exchange advertising space for other services, avoiding cash transactions.
-
-**Supplementary**: Michael B. Wong's 2024 research ("Money and Barter in the Field") demonstrated through the Bunz community's digital currency experiment that money overcomes the inefficiency of barter, but emphasized that redeemability is essential for currency circulation.
-
 ### 1.3 货币的功能与加密货币的表现 (Functions of Money and Performance of Cryptocurrencies)
 
 The document cites Charles Wheelan's "Naked Economics" to evaluate the performance of cryptocurrencies in terms of money functions:
@@ -152,29 +136,3 @@ Blockchain addresses the dependence on centralized institutions in traditional f
 **Example**: The Bitcoin network can complete global transfers without banks, reducing fees and improving efficiency.
 
 **Supplementary**: The applications of blockchain have expanded to supply chain management, medical records, voting systems, and other areas.
-
----
-
-## 五、重点词汇表 (Key Terms)
-
-Below are key English terms from the document and their Chinese explanations:
-
-- **Blockchain (区块链)**: Distributed ledger technology recording an immutable chain of transactions.
-- **Bitcoin (比特币)**: A decentralized digital currency based on blockchain.
-- **Cryptocurrency (加密货币)**: Digital currency protected by cryptography, such as Bitcoin.
-- **Medium of Exchange (交换媒介)**: A universal tool used for transactions.
-- **Store of Value (价值储存)**: Assets that can preserve wealth over the long term.
-- **Unit of Account (记账单位)**: Standard for measuring value.
-- **Barter (物物交换)**: A transaction method of directly exchanging goods or services.
-- **Peer-to-Peer (点对点)**: Direct interaction mode without intermediaries.
-- **Double-Spending (双重支付)**: Fraudulent behavior where the same digital currency is used multiple times.
-- **Proof-of-Work (工作量证明)**: A mechanism for verifying transactions by solving computational puzzles.
-- **Cryptography (密码学)**: Mathematical techniques for protecting information security.
-- **Encryption (加密)**: A protection method that converts data into an unreadable form.
-- **Hash Functions (哈希函数)**: Functions that generate fixed-length data digests.
-- **Digital Signature (数字签名)**: Encryption technology for verifying message authenticity.
-- **Public Key (公钥)**: A public key used for encryption or signature verification.
-- **Private Key (私钥)**: A confidential key used for decryption or signing.
-- **Anonymity (匿名性)**: The characteristic of hiding the identity of transactors.
-- **Decentralization (去中心化)**: System architecture without central control.
-

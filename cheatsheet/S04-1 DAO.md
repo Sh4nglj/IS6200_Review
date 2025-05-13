@@ -31,7 +31,7 @@ Agency Theory examines the relationship between asset owners (principals) and th
    - **Case**: Yahoo!'s multiple wrong decisions (document page 10), such as refusing to acquire Google for $1 million in 1998, rejecting Microsoft's $44.6 billion acquisition offer in 2008, and finally being acquired by Verizon for $5 billion in 2016. These decisions led to enormous value loss.
    - **Explanation**: Executive decision failures may stem from lack of ability or personal interest-driven motives, damaging the company's long-term value.
 
-## 二、去中心化自治组织（DAO）的定义与优势 (Definition and Advantages of Decentralized Autonomous Organizations)
+## 二、DAO的定义与优势
 
 ### 2.1 DAO的定义 (Definition of DAO)
 
@@ -105,9 +105,7 @@ Off-chain governance refers to governance activities taking place outside the bl
 - **Advantages**: Low cost, flexible, suitable for preliminary discussions.
 - **Disadvantages**: Results may be manipulated, less transparent than on-chain governance.
 
-### 4.3 案例：Uniswap的治理流程 (Case Study: Uniswap's Governance Process)
-
-Uniswap's governance combines on-chain and off-chain mechanisms (document pages 17-20):
+### 4.3 案例：Uniswap的治理流程
 
 1. **请求评论 (Request for Comment, RFC)**:
    - Initial ideas are proposed in the Governance Forum, with 7 days of community discussion, considered off-chain governance.
@@ -153,74 +151,7 @@ The document introduces several types of voting in DAOs (document pages 22-23):
 
 - **Tools**: Snapshot supports various voting types, such as single, weighted, and proportional voting, commonly used in DAO off-chain governance.
 
-## 六、代码示例：智能合约在DAO中的应用 (Code Example: Smart Contract Applications in DAOs)
-
-The document finally provides a smart contract code written in Go (document pages 86-89) for asset management, demonstrating how DAOs can achieve automated governance through blockchain.
-
-### 6.1 代码功能 (Code Functionality)
-
-The code implements an asset creation and query system, suitable for DAO asset management scenarios (such as vehicle transactions):
-
-1. **createHandler**:
-   - Displays the HTML page for creating assets (create.html), where users input asset information.
-
-2. **createResultHandler**:
-   - Processes user-submitted asset data (such as ID, color, size, owner, value), uploading it to the blockchain through the smart contract's `CreateAsset` function.
-   - Queries the asset status and renders the result page (createResult.html).
-
-3. **renderTemplate**:
-   - Uses Go templates to render HTML pages, displaying asset information.
-
-4. **Asset Structure**:
-   - Defines asset properties (such as ID, color, owner), stored on the blockchain through JSON serialization.
-
-### 6.2 示例代码分析 (Sample Code Analysis)
-
-Here is the simplified code logic:
-
-```go
-type Asset struct {
-    AppraisedValue int    `json:"AppraisedValue"`
-    Color          string `json:"Color"`
-    ID             string `json:"ID"`
-    Owner          string `json:"Owner"`
-    Size           string `json:"Size"`
-}
-
-func createResultHandler(contract *gateway.Contract) http.HandlerFunc {
-    return func(w http.ResponseWriter, r *http.Request) {
-        assetID := r.FormValue("aID")
-        assetColor := r.FormValue("aColor")
-        assetSize := r.FormValue("aSize")
-        assetOwner := r.FormValue("aOwner")
-        assetValue := r.FormValue("aValue")
-        // Call smart contract to create asset
-        _, err := contract.SubmitTransaction("CreateAsset", assetID, assetColor, assetSize, assetOwner, assetValue)
-        if err != nil {
-            http.ServeFile(w, r, "index.html")
-            return
-        }
-        // Query asset and display
-        assetJSON, _ := contract.SubmitTransaction("ReadAsset", assetID)
-        var asset Asset
-        json.Unmarshal(assetJSON, &asset)
-        renderTemplate(w, "createResult", &asset)
-    }
-}
-```
-
-- **Explanation**: The code obtains user input through HTTP requests, calls smart contracts to store asset data on the blockchain, ensuring data immutability. DAOs can use such contracts to manage asset allocation or transactions.
-- **Example**: In a used car trading DAO, users submit vehicle information (such as ID, color, size), smart contracts record ownership transfers, and the community votes on whether the transaction is valid.
-
-### 6.3 代码在DAO中的意义 (Significance of Code in DAOs)
-
-- **Automation**: Smart contracts automatically execute asset creation and queries, reducing human intervention.
-- **Transparency**: Asset data is stored on the blockchain, verifiable by any member.
-- **Governance**: DAOs can modify contract rules through voting, such as adjusting asset properties or transaction conditions.
-
-## 七、DAO的挑战（新成本） (Challenges of DAOs - New Costs)
-
-The document mentions new costs introduced by DAOs (document page 13); here's a supplementary analysis:
+## 七、DAO的挑战（新成本）
 
 1. **技术复杂性 (Technical Complexity)**:
    - DAOs rely on blockchain and smart contracts, with high development and maintenance costs. Ordinary users may be unable to participate due to technical barriers.
@@ -237,38 +168,3 @@ The document mentions new costs introduced by DAOs (document page 13); here's a 
 4. **法律与监管 (Legal and Regulatory Issues)**:
    - The legal status of DAOs is unclear, potentially facing regulatory risks.
    - **Supplementary**: In 2023, the US SEC sued certain DAOs for unregistered securities offerings, highlighting regulatory challenges.
-
-## 八、关键词汇总 (Key Terminology Summary)
-
-Below is a summary of key terms from the document and supplementary key terms with Chinese-English equivalents:
-
-- 去中心化自治组织 (Decentralized Autonomous Organization, DAO)
-- 代理理论 (Agency Theory)
-- 代理问题 (Agency Problem)
-- 代理成本 (Agency Costs)
-- 委托人 (Principals)
-- 代理人 (Agents)
-- 自利行为 (Self-Serving Behaviors)
-- 信息不对称 (Information Asymmetry)
-- 管理津贴 (Managerial Perks)
-- 薪酬 (Executive Compensation)
-- 次优决策 (Suboptimal Executive Decisions)
-- 区块链技术 (Blockchain Technology)
-- 智能合约 (Smart Contract)
-- 决策权 (Decision Rights)
-- 问责制 (Accountability)
-- 激励 (Incentives)
-- 激励对齐 (Incentive Alignment)
-- 治理 (Governance)
-- 链上治理 (On-Chain Governance)
-- 链下治理 (Off-Chain Governance)
-- 投票 (Voting)
-- 法定人数 (Quorum)
-- 时间锁 (Timelock)
-- 隔离见证 (Segregated Witness, SegWit)
-- 以太坊名称系统 (Ethereum Name System, ENS)
-- 代币经济 (Token Economics)
-
-## 九、总结 (Conclusion)
-
-This topic deeply explores how DAOs use blockchain technology to address agency problems in traditional organizations. Traditional organizations face challenges such as monitoring costs, information asymmetry, excessive expenses, and unrealized profits, while DAOs mitigate these issues through decentralization, transparency, and smart contracts. The cases of Uniswap and Bitcoin demonstrate the practice of on-chain and off-chain governance, with voting mechanisms and smart contract code further highlighting the automated and community-driven characteristics of DAOs. However, DAOs also face new challenges such as technical complexity, low efficiency, and regulatory risks. In the future, DAOs may play a greater role in finance, governance, and asset management, but need to balance decentralization with efficiency.

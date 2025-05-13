@@ -1,6 +1,6 @@
 # S05-2 Metaverse, NFT
 
-## 1. 元宇宙概述 (Overview of Metaverse)
+## 1. Overview of Metaverse
 
 ### 1.1 元宇宙的定义 (Definition of Metaverse)
 The document quotes Matthew Ball's (2022) definition, describing the metaverse as:
@@ -18,7 +18,7 @@ The document mentions that the metaverse can enhance the remote work (Work From 
 
 **Keywords**: Work From Home (WFH), Shared Virtual Screen, Immersive
 
-## 2. 元宇宙中的经济活动 (Economic Activities in the Metaverse)
+## 2. 元宇宙中的经济活动
 
 ### 2.1 经济活动的必然性 (Inevitability of Economic Activities)
 The document points out that economic activities in the metaverse are inevitable, not limited to financial payments but also including the trading of digital assets.
@@ -35,7 +35,7 @@ Blockchain provides a trust-less environment in the metaverse:
 
 **Keywords**: Economic Activities, Digital Assets, Blockchain, Immutable Ledger, Trust-less, Decentralized
 
-## 3. NFTs 和 SFTs 在元宇宙中的作用 (The Role of NFTs and SFTs in the Metaverse)
+## 3. NFTs 和 SFTs 在元宇宙中的作用
 
 ### 3.1 非同质化代币 (Non-Fungible Tokens, NFTs)
 - **Definition**: NFTs are tokens representing unique digital assets (such as artwork, virtual real estate) that cannot be interchanged and are recorded on the blockchain.
@@ -85,7 +85,7 @@ GameFi seamlessly integrates DeFi mechanisms, including:
 
 **Keywords**: GameFi, Play-to-Earn (P2E), True Ownership, Decentralized Finance (DeFi), Decentralized Exchange (DEX), Staking, Farming, Lending, Seamless Integration, Smart Contracts, Ghost Town, Fad
 
-## 5. 元宇宙的挑战与未来 (Challenges and Future of the Metaverse)
+## 5. 元宇宙的挑战与未来
 
 ### 5.1 技术与监管挑战 (Technical and Regulatory Challenges)
 - **Technical Challenges**: The metaverse requires powerful computing capabilities, real-time rendering, and low-latency network support; current technology is not yet fully mature.

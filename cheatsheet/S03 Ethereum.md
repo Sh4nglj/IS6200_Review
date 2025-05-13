@@ -1,17 +1,5 @@
 # S03 Ethereum
 
----
-
-## 1. 课程背景与目标 (Course Background and Objectives)
-
-The document explores Ethereum as a programmable blockchain, examining its technical principles, business potential, and comparison with Bitcoin. It analyzes Ethereum's role in decentralized applications (DApps) and smart contracts. The course aims to help students understand how Ethereum extends blockchain applications through Turing-complete programming capabilities, and to discuss its scalability solutions (such as sharding and Layer 2) and challenges.
-
-- **Keywords**: Ethereum, Programmable Blockchain, Smart Contracts, Turing Complete
-- **Explanation**: Ethereum functions like a global computer, allowing developers to write programs (smart contracts) that run on the blockchain, automatically executing contract terms.
-- **Example**: Alice uses an Ethereum smart contract to create an automatic rent payment program that transfers funds from her account to the landlord every month.
-
----
-
 ## 2. 比特币的扩展：彩色币与序数理论 (Bitcoin Extensions: Colored Coins and Ordinal Theory)
 
 ### 2.1 彩色币（Colored Coins）
@@ -230,7 +218,7 @@ Sidechains are independent blockchains running parallel to Ethereum, interacting
 
 ---
 
-## 6. 智能合约与安全问题 (Smart Contracts and Security Issues)
+## 6. 智能合约与安全问题
 
 ### 6.1 智能合约特点 (Smart Contract Characteristics)
 
@@ -255,7 +243,7 @@ Sidechains are independent blockchains running parallel to Ethereum, interacting
 
 ---
 
-## 7. 以太坊与去中心化互联网 (Ethereum and the Decentralized Internet)
+## 7. 以太坊与去中心化互联网
 
 ### 7.1 互联网的中心化问题 (Centralization Issues of the Internet)
 
@@ -283,116 +271,3 @@ Ethereum provides decentralized alternatives through DApps, such as decentralize
 - **Keywords**: Decentralized Social Media
 - **Explanation**: Decentralized social media is like users storing their own posts without relying on platforms.
 - **Example**: Bob publishes content on Lens, with data stored on Ethereum that platforms cannot delete.
-
----
-
-## 8. 快速问答（Quick Q&As）
-
-Below are questions and answers from the document, with additional explanations:
-
-1. **Is Ethereum programmable, but Bitcoin is not?** Yes
-   - Ethereum supports Solidity, while Bitcoin only supports simple scripts.
-2. **Was Ethereum publicly sold because of PoS?** No
-   - Ethereum raised funds through an ICO (Initial Coin Offering) and launched in 2015 using PoW.
-3. **Have Bitcoin and Ethereum never been successfully attacked?** No
-   - Ethereum suffered the DAO attack, while Bitcoin's network hasn't been directly attacked, but exchanges are frequently hacked.
-4. **Is creating an Ethereum address free?** Yes
-   - Similar to Bitcoin, generating an address costs nothing.
-5. **Do full nodes need to store all smart contract code?** Yes
-   - Full nodes need to synchronize the entire blockchain, including contract code.
-6. **Will erroneous smart contracts (such as infinite loops) cause network failure?** No
-   - Gas limits prevent infinite loops.
-7. **Can smart contracts be modified after deployment?** No
-   - Unless using proxy contracts.
-8. **If Gas is insufficient for a transaction, will Gas be refunded?** No
-   - Gas is used to pay for computation already performed and is not refunded.
-9. **Do Rollups store all transaction details on the main chain?** Yes
-   - Rollups submit compressed data to the main chain, ensuring transparency.
-10. **Are reentrancy attacks illegal?** No
-    - Exploiting technical vulnerabilities isn't necessarily illegal, but may be unethical.
-11. **Did Ethereum fork into Ethereum Classic because of PoS?** No
-    - The fork occurred due to the 2016 DAO attack, with the classic version opposing the rollback.
-12. **Does attacking Ethereum require 51% stake?** No
-    - 33% stake can disrupt consensus.
-
-- **Explanation**: These questions test understanding of Ethereum mechanisms, such as Gas, PoS, and security vulnerabilities.
-- **Example**: Alice's transaction failed due to insufficient Gas, resulting in a loss of 0.01 ETH, but the network was unaffected.
-
----
-
-## 9. 总结与关键词 (Summary and Keywords)
-
-Ethereum has expanded blockchain applications through smart contracts and Turing completeness, with PoS improving energy efficiency, and Layer 1 (sharding) and Layer 2 (Rollups, sidechains) solving scalability issues. However, smart contract vulnerabilities and potential PoS attacks (such as the 33% attack) require vigilance. Colored Coins and Ordinal Theory demonstrate Bitcoin's extension potential, but Ethereum has advantages in programmability and DApps.
-
-**Key English terminology**:
-- Ethereum
-- Programmable Blockchain
-- Smart Contracts
-- Turing Complete
-- EVM
-- The Merge
-- Proof-of-Stake (PoS)
-- Colored Coins
-- Bitcoin 2.0
-- Mastercoin
-- Satoshi
-- Milli-satoshi
-- Ordinal Theory
-- Ordinal Number
-- Inscription
-- Non-fungible
-- SegWit
-- Taproot
-- Difficulty Adjustment
-- Halving
-- Cycle
-- Conjunction
-- Decentralized Blockchain
-- Consensus Algorithm
-- Medium of Exchange
-- Store of Value
-- Validator
-- Stake
-- Gas Fees
-- Nothing at Stake
-- Slashing
-- Finality
-- Double-spending
-- 33% Attack
-- 51% Attack
-- Double Voting
-- Blockchain Trilemma
-- Decentralization
-- Security
-- Scalability
-- Sharding
-- Proto-Danksharding
-- Throughput
-- Rollups
-- Optimistic Rollups
-- ZK-Rollups
-- Challenge Period
-- Arbitrum
-- Sidechains
-- Polygon PoS
-- Block Time
-- Super Nodes
-- Proxy Contract
-- Full Node
-- Reentrancy Attack
-- Storage Collision
-- Centralized
-- Tor
-- Onion Routing
-- Relay Nodes
-- Decentralized Social Media
-
----
-
-## 10. 补充说明 (Additional Notes)
-
-- **Course Background**: City University of Hong Kong's course follows the philosophy of "Professional · Creative · For The World," encouraging exploration of blockchain technology.
-- **Further Learning**:
-  - Read the Ethereum white paper (https://ethereum.org/en/whitepaper/).
-  - Visit https://ethereum.org/en/developers/docs/ for development resources.
-  - Experience Polygon sidechain wallets (such as MetaMask) for low-fee transactions.
